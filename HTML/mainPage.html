@@ -7,128 +7,89 @@
 </head>
 
 <body>
-<nav>
 
-<a href="mainPage.html">MainPage</a> |
-<a href="Activnost.html">Activnost</a> |
-<a href="Distance.html">Distance</a> |
-<a href="EffectiveDose.html">EffectiveDose</a> |
-<a href="esstimateActivnost.html">EsstimateActivnost</a> |
-<a href="esstimateTime.html">EsstimateTime</a>
-
-</nav>
-
-<table class="table">
-
-  <tr>
-<td rowspan="7">
-<form enctype="multipart/form-data" method="post">
-<img src="Picture/Penguins.jpg" width="300px" height="400px">
-</form>
-</td>
-<td >
-<form method="post">
-  <label for="123">LastName</br></label>
-<input id="127" type="text" name="LastName">
-</form>
-</td>
-  </tr>
-
-    <tr>
-    <td colspan="2">
-      <form method="post">
-    <label>Name</br><input type="text" name="Name"></label>
-    </form>
-  </td>
+<div class="header">
+  <div class="container">
+    <ul class="main-nav">
+      <li><a href="mainPage.html">MainPage</a></li>
+      <li><a href="Activnost.html">Activnost</a></li>
+      <li><a href="Distance.html">Distance</a></li>
+      <li><a href="EffectiveDose.html">EffectiveDose</a></li>
+      <li><a href="esstimateActivnost.html">EsstimateActivnost</a></li>
+      <li><a href="esstimateTime.html">EsstimateTime</a></li>
+    </ul>
+  </div>
+</div>
 
 
-    </tr>
+<div class="feedback">
+      <div class="container">
+        <h2 class="section-title">Give us the information about you</h2>
+        <form class="feedback-form" enctype="multipart/form-data" action="reg" method="post">
+          <div class="leftsidefields">
+            <img src="Picture/Penguins.jpg" width="200px" height="250px">
+            <div class="feedback-form-group">
+            <input type="file" name="lastname" id="lastname">
+            </div>
+          </div>
+          <div class="rightsidefields">
+          <div class="feedback-form-group">
+            <label for="lastname">Lastname</label>
+            <input type="text" name="lastname" id="lastname">
+          </div>
+          <div class="feedback-form-group">
+            <label for="firstname">Firstname</label>
+            <input type="text" name="firstname" id="firstname">
+          </div>
+          <div class="feedback-form-group">
+            <label for="secondname">Secondname</label>
+            <input type="text" name="secondname" id="secondname">
+          </div>
+          <div class="feedback-form-group">
+            <label for="department">Department</label>
+            <input type="text" name="department" id="department">
+          </div>
+          <div class="feedback-form-group">
+            <label for="position">Position</label>
+            <input type="text" name="position" id="position">
+          </div>
+          <div class="feedback-form-group">
+            <label for="iddetector">Id detector</label>
+            <input type="text" name="iddetector" id="iddetector">
+          </div>
+          <div class="feedback-form-group">
+            <label for="info" style="margin-bottom: 20px;">Advanced info</label>
+            <textarea name="info" id="info" rows="3" cols="25"></textarea>
+          </div>
+        </div>
+        <input type="submit" class="btn" value="Отправить">
+          <div class="checkbox-area">
+            <label>
+              <input type="checkbox" name="subscription" disabled>
+              Connection
+            </label>
+          </div>
+          <div class="doze">
+          <div class="feedback-form-group">
+            <label for="current_doze">Current doze</label>
+            <input type="text" name="current_doze" id="current_doze" disabled>
+          </div>
+          <div class="feedback-form-group">
+            <label for="doze_last_day">Doze last day</label>
+            <input type="text" name="doze_last_day" id="doze_last_day" disabled>
+          </div>
+          <div class="feedback-form-group">
+            <label for="max_doze_last_day">Max doze last day</label>
+            <input type="text" name="max_doze_last_day" id="max_doze_last_day" disabled>
+          </div>
+          </div>
+        </form>
+      </div>
+    </div>
 
-    <tr>
-  <td colspan="2">
-    <form method="post">
-  <label>FirstName</br><input type="text" name="FirstName"></label>
-  </form>
-</td>
-
-
-    </tr>
-
-    <tr>
-    <td colspan="2">
-      <form method="post">
-      <label>Advanced Info</br><textarea name="Info" rows="6" cols="30"></textarea></label>
-      </form>
-    </td>
-
-
-    </tr>
-
-    <tr>
-    <td colspan="2">
-       <form method="post">
-      <label>Department</br><input type="text" name="Department"></label>
-      </form>
-    </td>
-
-
-    </tr>
-
-    <tr>
-    <td colspan="2">
-      <form method="post">
-     <label>Position</br><input type="text" name="Position"></label>
-     </form>
-      </td>
-
-
-    </tr>
-<tr>
-<td>
-  <form method="post">
- <label>Id detector</br><input type="text" name="Id detector"></label>
- </form></td>
-</tr>
-<tr>
-<td>
-  <form enctype="multipart/form-data" method="post">
-
-<input type="file" name="photo" accept="image/jpeg,image/x-png">
-
-</form>
-</td>
-<td colspan="2">
-  <form method="post">
- <label>Connection</br><input type="checkbox" name="Connection"></label>
- </form>
-</td>
-
-
-</tr>
-
-<tr>
-<td>
-  <form method="post">
- <label>Current Doze</br><input type="text" name="Current Doze"></label>
- </form>
-</td>
-<td>
-  <form method="post">
- <label>Doze last day</br><input type="text" name="Doze last day"></label>
- </form>
-</td>
-<td>
-  <form method="post">
- <label>Max Doze last day</br><input type="text" name="Max Doze last day"></label>
- </form>
-</td>
-
-</tr>
-
-<tr>
-<td colspan="3"> <a href="graf.html">More info</a></td>
-</tr>
-</table>
+<div class="moreinfo">
+  <a href="graf.html">More info</a>
+</div>
 </body>
 
 

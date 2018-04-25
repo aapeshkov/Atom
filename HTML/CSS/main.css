@@ -14,14 +14,137 @@ form {
 
 }
 body {
-    background-color:#eee;
-    color:black;
-    font:14px/1.3 Arial,sans-serif;
+    background-color: #eee;
+    color: black;
+    font: 14px/1.3 Arial,sans-serif;
 }
-header>nav>a {
-  background: linear-gradient(to bottom, #a5a5a5, #000);
-  border-radius: 10px
+
+.header {
+    min-height: 20px;
+    min-width: 1000px;
+    width: 100%;
+    padding-top: 35px;
+    background-color: black;
 }
-nav>a:hover {
-  color: green;
+
+.container {
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.main-nav {
+    float: left;
+    width: 800px;
+    margin: 0;
+    margin-top: -17px;
+    margin-left: 30px;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+}
+
+.main-nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+.main-nav li:last-child {
+    margin-right: 0;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.feedback {
+    padding-top: 10px;
+    padding-bottom: 70px;
+    margin-left: 30px;
+}
+
+.feedback-tip {
+    font-size: 16px;
+}
+
+.feedback-form {
+    width: 930px;
+    min-height: 400px;
+}
+
+.feedback-form .leftsidefields {
+    padding-top: 10px;
+    padding-left: 10px;
+    position: absolute;
+
+}
+
+.feedback-form .rightsidefields {
+    margin-left: 250px;
+    padding-top: 0;
+
+}
+
+.feedback-form-group {
+    padding: 10px 0;
+}
+
+.rightsidefields .feedback-form-group {
+    margin-left: auto;
+    text-align: right;
+    margin-right: 350px;
+
+}
+
+.feedback-form-group label {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.rightsidefields .feedback-form-group label {
+    font-size: 12px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+
+.feedback-form input[type="text"],
+.feedback-form select,
+.feedback-form textarea {
+    font: inherit;
+    color: inherit;
+    border: 2px solid #d5d5d5;
+    padding-right: 0;
+}
+
+.feedback-form input[type="text"]:hover,
+.feedback-form select:hover,
+.feedback-form textarea:hover {
+    border-color: #bebebe;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    border-color: #8d745a;
+}
+
+.checkbox-area {
+    margin-top: 20px;
+    border-top: 1px solid #d5d5d5;
+    text-align: left;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+.feedback-form .doze .feedback-form-group {
+    margin-top: 20px;
+    float: left;
+    margin-right: 15px;
+}
+
+.moreinfo {
+    text-align: center;
+    font-size: 18px;
 }
