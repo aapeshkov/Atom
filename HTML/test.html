@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- http-equiv="Content-Type" content="text/html; -->
+<link href="CSS/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <p>
+        <input type="file" id="file" multiple onchange="GetFileSizeNameAndType()" />
+    </p>
+
+    <div id="fp"></div>
+    <p>
+        <div id="divTotalSize"></div>
+    </p>
+  <script>
+    function GetFileSizeNameAndType()
+            {
+            var fi = document.getElementById('file'); // GET THE FILE INPUT AS VARIABLE.
+            var  path = '';
+
+            if (fi.files.length > 0)
+            {
+              path =  fi.files.item.name
+            }
+          return
+        }
+        </script>
+
+        </body>
+
+
+        </html>
