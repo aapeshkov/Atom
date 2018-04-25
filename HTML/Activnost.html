@@ -4,6 +4,7 @@
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
 <link href="main.css" rel="stylesheet">
+<script scr="JavaScript/Activnost.js"> </script>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
 </select> <br>
 <label>Known Data</br><input type="text" name="KnownData" id="knownData"></label> <br>
 <label>Data Result</br><input type="text" name="DataResult" id="dataResult"></label> <br>
-<button id="Decide">Calculate</button><br>
+<button id="Decide" onClick="calculate()">Calculate</button><br>
 <br>
 <label>Result</br><input type="text" name="Result" id="result"></label>
 <select name="BkOutput" id="bkOutput">
@@ -40,9 +41,6 @@
   <option value="kBk" id="kBk">kBk</option>
   <option value="MBk" id="MBk">MBk</option>
 </select> <br>
-
-
-
 
 
 </body>
