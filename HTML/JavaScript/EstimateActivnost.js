@@ -5,6 +5,7 @@ var CF7 =  document.getElementById('CF7').value;
 var d = document.getElementById('DepthScreen').value;
 var d1_2 = 0;
 if (document.getElementById('poglotit').checked){
+  alert('Checked');
 var d1_2 = document.getElementById('KoefficHalf').value;
 }
 alert('Run');
