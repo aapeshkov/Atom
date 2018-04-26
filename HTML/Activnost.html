@@ -3,23 +3,28 @@
 <head>
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
-<link href="CSS\Activnost.css" rel="stylesheet">
+<link href="CSS\main.css" rel="stylesheet">
 <script src="JavaScript\Actinost.js"> </script>
 </head>
 
 <body>
-  <nav>
+  <div class="header">
+    <div class="container">
+      <ul class="main-nav">
+        <li><a href="mainPage.html">MainPage</a></li>
+        <li><a href="Activnost.html">Activnost</a></li>
+        <li><a href="Distance.html">Distance</a></li>
+        <li><a href="EffectiveDose.html">EffectiveDose</a></li>
+        <li><a href="esstimateActivnost.html">EsstimateActivnost</a></li>
+        <li><a href="esstimateTime.html">EsstimateTime</a></li>
+      </ul>
+    </div>
+  </div>
 
-  <a href="mainPage.html">MainPage</a> |
-  <a href="Activnost.html">Activnost</a> |
-  <a href="Distance.html">Distance</a> |
-  <a href="EffectiveDose.html">EffectiveDose</a> |
-  <a href="esstimateActivnost.html">EsstimateActivnost</a> |
-  <a href="esstimateTime.html">EsstimateTime</a>
 
-  </nav>
-
-  <label>Selected Element</br><input type="text" name="SelectedElement" id="element"></label> <br>
+<div class="Active">
+  <div class="container">
+<label>Selected Element</br><input type="text" name="SelectedElement" id="element"></label> <br>
 <label>Period</br><input type="text" name="Period" id="period"></label> <br>
 <label>Input Activnost</br><input type="text" name="InputActivnost" id="activnost"></label>
 <select name="BkInput" id="bkInput">
@@ -33,7 +38,7 @@
 <label>Data Result</br><input type="text" name="DataResult" id="dataResult"></label> <br>
 <button id="Decide" onClick="calculate()">Calculate</button><br>
 <br>
-<label>Result</br><input type="text" name="Result" id="result"></label>
+<label>Result</br><input type="text" name="Result" id="result" disabled></label>
 <select name="BkOutput" id="bkOutput">
   <option value="mkBk" id="mkBk">mkBk</option>
   <option value="mBk" id="mBk">mBk</option>
@@ -41,6 +46,8 @@
   <option value="kBk" id="kBk">kBk</option>
   <option value="MBk" id="MBk">MBk</option>
 </select> <br>
+</div>
+</div>
 
 
 
