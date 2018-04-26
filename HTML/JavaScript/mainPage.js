@@ -1,10 +1,7 @@
 function showname () {
-  var name = document.getElementById('fileInput');
+  var name = document.getElementById('file');
   alert('Selected file: ' + name.files.item(0).name);
-  alert('Selected file: ' + name.files.item(0).size);
-  alert('Selected file: ' + name.files.item(0).type);
+var a = document.getElementById('img');
+a.src = a.src.replace()'Picture/'+name.files.item(0).name);
+alert('1');
 };
-
-var ChangeImage = function() {
-alert('Run');
-  }
