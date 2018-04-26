@@ -1,19 +1,10 @@
+function showname () {
+  var name = document.getElementById('fileInput');
+  alert('Selected file: ' + name.files.item(0).name);
+  alert('Selected file: ' + name.files.item(0).size);
+  alert('Selected file: ' + name.files.item(0).type);
+};
 
-var  path = 'Penguins.jpg';
-function GetFileName()
-        {
-        var fi = document.getElementById('file'); // GET THE FILE INPUT AS VARIABLE.
-
-
-        if (fi.files.length > 0)
-        {
-          path =  fi.files.item.name;
-          alert(path);
-        }
-
-    }
-
-function ChangeImage(path) {
-var a = document.getElementById('img');
-a.src ='Picture/'
-}
+var ChangeImage = function() {
+alert('Run');
+  }
