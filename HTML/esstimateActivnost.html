@@ -3,7 +3,7 @@
 <head>
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
-<link href="main.css" rel="stylesheet">
+<script src="JavaScript/EsstimateActivnost.js"> </script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
   </nav>
   <label>Selected Element</br><input type="text" name="SelectedElement"></label> <br>
   <label>CF7</br><input type="text" name="CF7" id="CF7">(mGr/chas)/(kBk)</label> <br>
-  <label>Power Dose</br><input type="text" name="PowerDose"></label>
+  <label>Power Dose</br><input type="text" name="PowerDose" id="PowerDose"></label>
   <select name="GrOutput">
       <option value="nGr/chas">nGr/chas</option>
     <option value="mkGr/chas">mkGr/chas</option>
@@ -27,7 +27,7 @@
     <option value="Gr/chas" >Gr/chas</option>
 
   </select> <br>
-  <label>Distance to Source</br><input type="text" name="DistanceToSource"></label>
+  <label>Distance to Source</br><input type="text" name="DistanceToSource" id="DistanceToSource"></label>
   <select name="Distance">
 
     <option value="cm" >cm</option>
@@ -35,11 +35,24 @@
       <option value="km">km</option>
 
   </select> <br>
+
+  <!--Характеристики поглотителя  -->
+  <label><input type="checkbox" id="poglotit" checked>Prisutstvuet Poglotitel </label><br>
+  <label>Input Poglotitel</br><input type="text" name="InputPoglotit"></label><br>
+  <label>Koefficient half oslableniya, cm</br><input type="text" name="KoefficHalf" id="KoefficHalf"></label><br>
+  <label>Depth screen</br><input type="text" name="DepthScreen" id="DepthScreen"></label>
+  <select name="Depth">
+    <option value="mm">mm</option>
+    <option value="cm" selected>cm</option>
+    <option value="m">m</option>
+
+  </select> <br>
+<!-- Result -->
   <br>
-  <button id="Decide">Calculate</button><br>
+  <button id="Decide" onClick="EstimateActiv()">Calculate</button><br>
   <br>
 
-  <label>Result Activnost</br><input type="text" name="ResultActivnost"></label>
+  <label>Result Activnost</br><input type="text" name="ResultActivnost" id="ResultActivnost" disabled></label>
   <select name="ResActivnost">
       <option value="nBk">nBk</option>
     <option value="mkBk">mkBk</option>
@@ -49,20 +62,6 @@
         <option value="MBk" >MBk</option>
 
   </select> <br>
-
-
-  <!--Характеристики поглотителя  -->
-  <label><input type="checkbox" id="poglotit" checked>Prisutstvuet Poglotitel </label><br>
-  <label>Input Poglotitel</br><input type="text" name="InputPoglotit"></label><br>
-  <label>Koefficient half oslableniya, cm</br><input type="text" name="KoefficHalf"></label><br>
-  <label>Depth screen</br><input type="text" name="DepthScreen"></label>
-  <select name="Depth">
-    <option value="mm">mm</option>
-    <option value="cm" selected>cm</option>
-    <option value="m">m</option>
-
-  </select> <br>
-
 
 </body>
 
