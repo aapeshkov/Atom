@@ -3,8 +3,9 @@
 <head>
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
-<link href="CSS/main.css" rel="stylesheet">
 <script src="JavaScript/mainPage.js"> </script>
+<link href="CSS/main.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -26,16 +27,16 @@
 <div class="feedback">
       <div class="container">
         <h2 class="section-title">Give us the information about you</h2>
-        <form class="feedback-form" enctype="multipart/form-data" action="reg" method="post">
+  <form class="feedback-form" enctype="multipart/form-data" action="" method="post">
           <div class="leftsidefields">
             <img src="Picture/Penguins.jpg" width="200px" height="250px" id="img">
             <div class="feedback-form-group">
-            <input type="file" name="lastname" id="file" onClick="GetFileName">
-              <button id="changeFile" onClick="ChangeImage">Change </button>
+            <input type="file" name="lastname" id="file" onchange="showname()">
+
             </div>
           </div>
           <div class="rightsidefields">
-          <div class="feedback-form-group">
+          <div class="feedback-form-group">w
             <label for="lastname">Lastname</label>
             <input type="text" name="lastname" id="lastname">
           </div>
@@ -94,7 +95,9 @@
 </div>
 
 
-
+<div>
+        <button onClick="ChangeImage">ChangeImage</button>
+</div>
 
 
 </body>
