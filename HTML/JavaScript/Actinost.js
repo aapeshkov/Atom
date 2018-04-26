@@ -1,6 +1,3 @@
-
-
-
 var calculate = function() {
 var period = document.getElementById('period').value;
 var activ =  document.getElementById('activnost').value;
