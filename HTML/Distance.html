@@ -3,7 +3,6 @@
 <head>
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
-<link href="main.css" rel="stylesheet">
 <script src="JavaScript\Distance.js"> </script>
 </head>
 
@@ -24,27 +23,27 @@
 
   <label>Distance betwen M1 and M2</br><input type="text" name="DistanceBetwen" id="distanceBetween"></label>
   <select name="DistM1M2">
-    <option value="cm" id="">cm</option>
-    <option value="metr" id="" selected>m</option>
-    <option value="km" id="">km</option>
+    <option value="cm" >cm</option>
+    <option value="metr"  selected>m</option>
+    <option value="km" >km</option>
   </select> <br>
 <label>Power(moschnost) M1</br><input type="text" name="PowerM1" id="PowerM1"></label>
   <select name="PowerM1">
-    <option value="nano" id="">nZv/chas</option>
-    <option value="micro" id="" selected>mcZv/chas/option>
-    <option value="milli" id="">mZv/chas</option>
-    <option value="zv" id="">Zv/chas</option>
+    <option value="nano" >nZv/chas</option>
+    <option value="micro" selected>mcZv/chas</option>
+    <option value="milli">mZv/chas</option>
+    <option value="zv">Zv/chas</option>
   </select> <br>
 <label>Power(moschnost) M2</br><input type="text" name="PowerM2" id="PowerM2"></label>
-    <select name="PowerM2" id="">
-      <option value="nano" id="">nZv/chas</option>
-      <option value="micro" id="" selected>mcZv/chas/option>
-      <option value="milli" id="">mZv/chas</option>
-      <option value="zv" id="">Zv/chas</option>
+    <select name="PowerM2">
+      <option value="nano">nZv/chas</option>
+      <option value="micro" selected>mcZv/chas</option>
+      <option value="milli">mZv/chas</option>
+      <option value="zv">Zv/chas</option>
     </select> <br>
 
 <label>Distance from M1 to Source</br><input type="text" name="M1toSource" id="M1toSource"></label> <br>
-<button id="Decide1" onClick="calculate()">Calculate </button>
+<button id="Decide1" onClick="distanceToSource()">Calculate </button>
 <br>
 <br>
 <img src="Picture/distance.png" width="350px" height="150px" id="img_dist">
