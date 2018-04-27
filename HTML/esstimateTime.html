@@ -3,21 +3,26 @@
 <head>
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
-<link href="main.css" rel="stylesheet">
+<link href="CSS/main.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
 
-  <a href="mainPage.html">MainPage</a> |
-  <a href="Activnost.html">Activnost</a> |
-  <a href="Distance.html">Distance</a> |
-  <a href="EffectiveDose.html">EffectiveDose</a> |
-  <a href="esstimateActivnost.html">EsstimateActivnost</a> |
-  <a href="esstimateTime.html">EsstimateTime</a>
+  <div class="header">
+    <div class="container">
+      <ul class="main-nav">
+        <li><a href="mainPage.html">MainPage</a></li>
+        <li><a href="Activnost.html">Activnost</a></li>
+        <li><a href="Distance.html">Distance</a></li>
+        <li><a href="EffectiveDose.html">EffectiveDose</a></li>
+        <li><a href="esstimateActivnost.html">EsstimateActivnost</a></li>
+        <li><a href="esstimateTime.html">EsstimateTime</a></li>
+      </ul>
+    </div>
+  </div>
 
-  </nav>
-
+  <div class="Active">
+    <div class="container">
    <!--Оценка скорости перемещения -->
   <label><input type="radio" name="rast" value="estimate of speed" checked> Estimate of speed</label><br>
   <!--Оценка эффективной дозы -->
@@ -120,7 +125,8 @@
   <option value="min" selected>min</option>
   <option value="chas">chas</option>
 </select> <br>
-
+</div>
+</div>
 
 
 </body>

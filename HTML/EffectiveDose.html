@@ -3,20 +3,26 @@
 <head>
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
-<link href="main.css" rel="stylesheet">
+<link href="CSS/main.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav>
+  
+  <div class="header">
+    <div class="container">
+      <ul class="main-nav">
+        <li><a href="mainPage.html">MainPage</a></li>
+        <li><a href="Activnost.html">Activnost</a></li>
+        <li><a href="Distance.html">Distance</a></li>
+        <li><a href="EffectiveDose.html">EffectiveDose</a></li>
+        <li><a href="esstimateActivnost.html">EsstimateActivnost</a></li>
+        <li><a href="esstimateTime.html">EsstimateTime</a></li>
+      </ul>
+    </div>
+  </div>
 
-  <a href="mainPage.html">MainPage</a> |
-  <a href="Activnost.html">Activnost</a> |
-  <a href="Distance.html">Distance</a> |
-  <a href="EffectiveDose.html">EffectiveDose</a> |
-  <a href="esstimateActivnost.html">EsstimateActivnost</a> |
-  <a href="esstimateTime.html">EsstimateTime</a>
-
-  </nav>
+  <div class="Active">
+    <div class="container">
   <!--Мощность дозы -->
   <label><input type="radio" name="rast" value="power of dose" checked> Power of Dose</label><br>
     <!--Эффективная доза -->
@@ -90,7 +96,8 @@
       <option value="MBk" >MBk</option>
 
 </select> <br>
-
+</div>
+</div>
 
 </body>
 
