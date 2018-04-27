@@ -170,3 +170,11 @@ textarea{
 .checkbox-categories {
     min-height: 80px;
 }
+
+.hidden {
+    display: none;
+}
+
+.unhidden {
+    display: block;
+}
