@@ -11,12 +11,43 @@
     <p>
         <input type="file" id="file" multiple onchange="GetFileSizeNameAndType()" />
     </p>
+<br>
+<br>
+<br>
+<form action="test.html">
+<input type="date" id="1" name="calendar">
+<br>
+<input type="date" id="2">
+<br>
+<input type="text" id="txt">
+<br>
+</form>
+<button onClick="CalculateData()"> </button>
 
-    <div id="fp"></div>
-    <p>
-        <div id="divTotalSize"></div>
-    </p>
-  <script>
+<script>
+function CalculateData() {
+var d1 = new Date(document.getElementById('1').value);
+var d2 = new Date(document.getElementById('2').value);
+var d = Math.abs(d2 - d1);
+var milliseconds = d;
+var seconds = milliseconds / 1000;
+var minutes = seconds / 60;
+var hours = minutes / 60;
+var days = hours / 24;
+ 
+document.getElementById('txt').value = Math.ceil(days);;
+
+
+}
+
+</script>
+
+
+
+
+
+
+<script>
     function GetFileSizeNameAndType()
             {
             var fi = document.getElementById('file'); // GET THE FILE INPUT AS VARIABLE.
