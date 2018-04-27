@@ -152,9 +152,29 @@ textarea{
     margin-left: 30px;
 }
 
-.hidden {
- display: none;
+.category1 {
+    position: absolute;
+    float: left;
+    padding: 10px;
+    border: 1px solid black;
+    width: 130px;
 }
+
+.category2 {
+    margin-left: 180px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 130px;
+}
+
+.checkbox-categories {
+    min-height: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
 .unhidden {
-  display: block;
+    display: block;
 }
