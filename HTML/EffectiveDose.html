@@ -4,10 +4,11 @@
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
 <link href="CSS/main.css" rel="stylesheet">
+<script src="JavaScript/EffectiveDose.js"> </script>
 </head>
 
 <body>
-  
+
   <div class="header">
     <div class="container">
       <ul class="main-nav">
@@ -24,24 +25,24 @@
   <div class="Active">
     <div class="container">
   <!--Мощность дозы -->
-  <label><input type="radio" name="rast" value="power of dose" checked> Power of Dose</label><br>
+  <label><input type="radio" name="rast" value="powerOfDose" id="powerOfDose" onChange="radio" checked> Power of Dose</label><br>
     <!--Эффективная доза -->
-  <label><input type="radio" name="rast" value="effective dose"> Effective Dose</label><br>
+  <label><input type="radio" name="rast" value="effectiveDose" onChange="radio"> Effective Dose</label><br>
 
   <!--Категория А -->
-  <label><input type="radio" name="rast" value="CategoryA" checked> Category A</label><br>
+  <label><input type="radio" name="categor" value="CategoryA" checked> Category A</label><br>
     <!--Население -->
-  <label><input type="radio" name="rast" value="People"> People</label><br>
+  <label><input type="radio" name="categor" value="People"> People</label><br>
 
   <!--Выберете элемент -->
-<label>Selected Element</br><input type="text" name="SelectedElement"></label> <br>
+<label>Selected Element</br><input type="text" name="SelectedElement" disabled></label> <br>
 <!--CF6 -->
-<label>CF6</br><input type="text" name="CF6">(mZv/chas)/(kBk)</label> <br>
+<label>CF6</br><input type="text" name="CF6" id="CF6">(mZv/chas)/(kBk)</label> <br>
 <!--CF7 -->
-<label>CF7</br><input type="text" name="CF7">(mGr/chas)/(kBk)</label> <br>
+<label>CF7</br><input type="text" name="CF7" id="CF7">(mGr/chas)/(kBk)</label> <br>
 
 <!--Активность -->
-<label>Activnost</br><input type="text" name="Activnost"></label>
+<label>Activnost</br><input type="text" name="Activnost" id="Activnost"></label>
 <!--Единицы измерения активности -->
 <select name="ResActivnost">
     <option value="nBk">nBk</option>
@@ -53,19 +54,25 @@
 
 </select> <br>
 <!--Расстояние от источника -->
-<label>Distance to source</br><input type="text" name="DistanceToSource"></label>
+<label>Distance to source</br><input type="text" name="DistanceToSource" id="DistanceToSource"></label>
 <!--Единицы измерения расстояния от источника -->
-<select name="Depth">
+<select name="Distance">
   <option value="m" selected>m</option>
   <option value="km">mm</option>
+</select> <br>
+<!--Time of work -->
+<label>Time of work</br><input type="text" name="Time" id="Time"></label>
+<select name="Time">
+  <option value="min" selected>min</option>
+  <option value="hours">hours</option>
 </select> <br>
 
 <!--Характеристики поглотителя  -->
 <label><input type="checkbox" id="poglotit" checked>Prisutstvuet Poglotitel </label><br>
-<label>Input Poglotitel</br><input type="text" name="InputPoglotit"></label><br>
-<label>Koefficient half oslableniya, cm</br><input type="text" name="KoefficHalf"></label><br>
+<label>Input Poglotitel</br><input type="text" name="InputPoglotit" disabled></label><br>
+<label>Koefficient half oslableniya, cm</br><input type="text" name="KoefficHalf" id="KoefficHalf"></label><br>
 <!--Толщина экрана -->
-<label>Deepth of screen</br><input type="text" name="DepthOfScreen"></label>
+<label>Deepth of screen</br><input type="text" name="DepthOfScreen" id="DepthOfScreen"></label>
 <!--Единицы измерения толщины экрана -->
 <select name="Depth">
   <option value="mm">mm</option>
@@ -74,11 +81,11 @@
 
 </select> <br>
 <br>
-<button id="Decide">Calculate</button><br>
+<button id="Decide" onClick="EffectiveDose()">Calculate</button><br>
 <br>
 
 <!--Результат Эффективная доза  -->
-<label>Result effective dose <input type="text" value="result effective dose" > </label>
+<label>Result effective dose <input type="text" name="result effective dose" id="ResultEffectiveDose"> </label>
 <select name="ResEffectiveDose">
     <option value="nZv">nBk</option>
   <option value="mkZv">mkBk</option>
@@ -86,7 +93,7 @@
   <option value="Bk">Bk</option>
 </select> <br>
 <!--Результат мощность дозы -->
-<label>Result power of dose <input type="text" value="result power of dose" > </label>
+<label>Result power of dose <input type="text" name="result power of dose" id="ResultPowerOfDose" > </label>
 <select name="ResActivnost">
     <option value="nBk">nBk</option>
   <option value="mkBk">mkBk</option>
