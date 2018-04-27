@@ -4,6 +4,7 @@
 <meta  http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!-- http-equiv="Content-Type" content="text/html; -->
 <link href="CSS/main.css" rel="stylesheet">
+<script src="JavaScript/EstimateTime.js"></script>
 </head>
 
 <body>
@@ -24,23 +25,23 @@
   <div class="Active">
     <div class="container">
    <!--Оценка скорости перемещения -->
-  <label><input type="radio" name="rast" value="estimate of speed" checked> Estimate of speed</label><br>
+  <label><input type="radio" name="rast" value="estimate of speed" id="estimateOfSpeed" checked> Estimate of speed</label><br>
   <!--Оценка эффективной дозы -->
-  <label><input type="radio" name="rast" value="estimate of effective dose">Estimate of Effective Dose</label><br>
+  <label><input type="radio" name="rast" value="estimate of effective dose" id="estimateOfEffDose">Estimate of Effective Dose</label><br>
   <!--Оценка допустимого времени -->
-<label><input type="radio" name="rast" value="estimate of time"> Estimate of time</label><br>
+<label><input type="radio" name="rast" value="estimate of time" id="estimateOfTime"> Estimate of time</label><br>
 
 
   <!--Известен источник -->
 <label><input type="checkbox" checked> Source is known?</label><br>
   <!--Выберете элемент -->
-<label>Selected Element</br><input type="text" name="SelectedElement"></label> <br>
+<label>Selected Element</br><input type="text" name="SelectedElement" disabled></label> <br>
 <!--CF6 -->
-<label>CF6</br><input type="text" name="CF6">(mZv/chas)/(kBk)</label> <br>
+<label>CF6</br><input type="text" name="CF6" id="CF6">(mZv/chas)/(kBk)</label> <br>
 
 
 <!--Активность -->
-<label>Activnost</br><input type="text" name="Activnost"></label>
+<label>Activnost</br><input type="text" name="Activnost" id="Activnost"></label>
 <!--Единицы измерения активности -->
 <select name="ResActivnost">
     <option value="nBk">nBk</option>
@@ -52,14 +53,14 @@
 
 </select> <br>
 <!--Расстояние от источника с которого подходим-->
-<label>Distance to source start</br><input type="text" name="DistanceToSourceStart"></label>
+<label>Distance to source start</br><input type="text" name="DistanceToSourceStart" id="DistanceToSourceStart"></label>
 <!--Единицы измерения расстояния от источника -->
 <select name="DistStart">
   <option value="m" selected>m</option>
   <option value="km">mm</option>
 </select> <br>
 <!--Расстояние от источника с которого подходим-->
-<label>Distance to source finish</br><input type="text" name="DistanceToSourceFinish"></label>
+<label>Distance to source finish</br><input type="text" name="DistanceToSourceFinish" id="DistanceToSourceFinish"></label>
 <!--Единицы измерения расстояния от источника -->
 <select name="DistFinish">
   <option value="m" selected>m</option>
@@ -67,32 +68,42 @@
 </select> <br>
 
 <!--Скорость-->
-<label>Speed</br><input type="text" name="Speed"></label>
+<label>Speed</br><input type="text" name="Speed" id="Speed"></label>
 <!--Единицы измерения скорости -->
-<select name="Speed">
+<select name="Speed" id="Speed1">
   <option value="m/sec" selected>m/sec</option>
   <option value="km/chas">km/chas</option>
 </select> <br>
 
 <!--Время работы -->
-<label>Speed</br><input type="text" name="Speed"></label>
+<label>Time of work</br><input type="text" name="Time" id="Time"></label>
 <!--Единицы измерения времени -->
 <select name="Time">
   <option value="sec" >sec</option>
   <option value="min" selected>min</option>
   <option value="chas">chas</option>
 </select> <br>
+
+<!--Предельная эффективная доза -->
+<label>Limit to effective dose</br><input type="text" name="LimitEffDose" id="LimitEffDose"></label>
+<!--Единицы измерения эффективной дозы -->
+<select name="EffDose">
+  <option value="nZv" >sec</option>
+  <option value="mkZv" selected>min</option>
+  <option value="mZv">chas</option>
+  <option value="Zv">chas</option>
+  <option value="kZv">chas</option>
+</select> <br>
 <!--Туда и обратно -->
 <label><input type="checkbox"> Front and Back</label><br>
 
 
-
 <!--Характеристики поглотителя  -->
 <label><input type="checkbox" id="poglotit" checked>Prisutstvuet Poglotitel </label><br>
-<label>Input Poglotitel</br><input type="text" name="InputPoglotit"></label><br>
-<label>Koefficient half oslableniya, cm</br><input type="text" name="KoefficHalf"></label><br>
+<label>Input Poglotitel</br><input type="text" name="InputPoglotit" disabled></label><br>
+<label>Koefficient half oslableniya, cm</br><input type="text" name="KoefficHalf" id="KoefficHalf"></label><br>
 <!--Толщина экрана -->
-<label>Deepth of screen</br><input type="text" name="DepthOfScreen"></label>
+<label>Deepth of screen</br><input type="text" name="DepthOfScreen" id="DepthOfScreen"></label>
 <!--Единицы измерения толщины экрана -->
 <select name="Depth">
   <option value="mm">mm</option>
@@ -101,11 +112,11 @@
 
 </select> <br>
 <br>
-<button id="Decide">Calculate</button><br>
+<button id="Decide" onClick="estimateTime()">Calculate</button><br>
 <br>
 
 <!--Результат Эффективная доза  -->
-<label>Result effective dose <input type="text" value="result effective dose" > </label>
+<label>Result effective dose <input type="text" name="result effective dose" id="resultEffDose" disabled> </label>
 <select name="ResEffectiveDose">
     <option value="nZv">nBk</option>
   <option value="mkZv">mkBk</option>
@@ -113,13 +124,13 @@
   <option value="Bk">Bk</option>
 </select> <br>
 <!--Результат скорости -->
-<label>Result speed <input type="text" value="result speed" > </label>
+<label>Result speed <input type="text" name="result speed" id="resultSpeed" disabled> </label>
 <select name="ResSpeed">
   <option value="m/sec" selected>m/sec</option>
   <option value="km/chas">km/chas</option>
 </select> <br>
 <!--Результат времени-->
-<label>Result time<input type="text" value="result time" > </label>
+<label>Result time<input type="text" name="result time" id="resultTime" disabled> </label>
 <select name="ResTime">
   <option value="sec" >sec</option>
   <option value="min" selected>min</option>
