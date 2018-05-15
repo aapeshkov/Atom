@@ -1,18 +1,11 @@
-var db = require('db');
-db.connect();
-var log = require('./logger')(module);
+var http = require('http');
 
-var user = require('./user');
-function run() {
-var vasya = new user.User("Вася");
-var petya = new user.User("Петя");
+var server = new http.Server();
 
-vasya.hello(petya);
-log(db.getPhrase("Run successful"));
-};
+server.listen(8888);
 
-if (module.parent) {
-exports.run = run;
-} else {
-  run();
-}
+server.on('request', function(req, res) {
+res.end("Привет, мир!");
+
+
+});
