@@ -1,0 +1,180 @@
+body {
+    background-color: #eee;
+    color: black;
+    font: 14px/1.3 Arial,sans-serif;
+}
+
+.header {
+    min-height: 20px;
+    min-width: 1000px;
+    width: 110%;
+    margin: -10px;
+    padding-top: 35px;
+    background-color: black;
+}
+
+.container {
+    min-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+    float: left;
+}
+
+.main-nav {
+    float: left;
+    width: 800px;
+    margin: 0;
+    margin-top: -17px;
+    margin-left: 30px;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+}
+
+.main-nav li {
+    float: left;
+    margin-right: 20px;
+}
+
+.main-nav li:last-child {
+    margin-right: 0;
+}
+
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: yellow;
+}
+
+.registration {
+    padding-top: 10px;
+    padding-bottom: 70px;
+    margin-left: 30px;
+}
+
+
+.form-tip {
+    font-size: 16px;
+}
+
+.form {
+    width: 930px;
+    min-height: 400px;
+}
+
+.form .leftsidefields {
+    padding-top: 10px;
+    padding-left: 10px;
+    position: absolute;
+
+}
+
+.form .rightsidefields {
+    margin-left: 250px;
+    padding-top: 0;
+
+}
+
+.form-group {
+    padding: 10px 0;
+}
+
+.rightsidefields .form-group {
+    margin-left: auto;
+    text-align: right;
+    margin-right: 350px;
+
+}
+
+.form-group label {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.rightsidefields .form-group label {
+    font-size: 12px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+
+.form input[type="text"],
+.form select,
+.form textarea {
+    font: inherit;
+    color: inherit;
+    border: 2px solid #d5d5d5;
+    padding-right: 0;
+}
+
+.form input[type="text"]:hover,
+.form select:hover,
+.form textarea:hover {
+    border-color: #bebebe;
+}
+
+.form input[type="text"]:focus,
+.form select:focus,
+.form textarea:focus {
+    border-color: #8d745a;
+}
+
+label,
+textarea{
+  vertical-align:middle;
+}
+
+.checkbox-area {
+    margin-top: 20px;
+    border-top: 1px solid #d5d5d5;
+    text-align: left;
+    padding-left: 60px;
+    padding-top: 10px;
+}
+
+.form .doze .form-group {
+    margin-top: 20px;
+    float: left;
+    margin-right: 15px;
+}
+
+.moreinfo {
+    text-align: center;
+    font-size: 18px;
+}
+
+.Active {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.category1 {
+    position: absolute;
+    float: left;
+    padding: 10px;
+    border: 1px solid black;
+    width: 130px;
+}
+
+.category2 {
+    margin-left: 180px;
+    padding: 10px;
+    border: 1px solid black;
+    width: 130px;
+}
+
+.checkbox-categories {
+    min-height: 80px;
+}
+
+.hidden {
+    display: none;
+}
+
+.unhidden {
+    display: block;
+}
