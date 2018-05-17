@@ -1,7 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 
-    fs.readFileSync('main.css');
+  //  fs.readFileSync('main.css');
 http.createServer(function(req, res){
   var info;
   if (req.url == '/mainPage'){
@@ -16,11 +16,6 @@ http.createServer(function(req, res){
     res.end(info);
     console.log("Success MainPage");
   });
-} else if (req.url == '/Activnost'){
-  info = fs.readFileSync('Activnost.html', function(err, info){
-    res.end(info);
-    console.log("Success Activnost");
-  })
 }
 
 }).listen(8888);
