@@ -6,6 +6,7 @@ var app = express();
 // создаём маршрут для главной страницы
 // http://localhost:8080/
 app.get('/mainPage', function(req, res) {
+  res.header ('href="/main.css" rel="stylesheet"' );
   res.sendfile('mainPage.html');
   res.sendfile('main.css');
 
