@@ -5,17 +5,20 @@ var fs = require('fs');
 http.createServer(function(req, res){
   var info;
   if (req.url == '/mainPage'){
-
-  info = fs.readFileSync('mainPage.html', function(err, info){
-    if (err) {
-      console.error(err);
-      res.statusCode = 500;
-      res.end("На сервере произошла ошибка!");
-      return;
-    }
-    res.end(info);
-    console.log("Success MainPage");
-  });
+console.log('Succes');
+info = fs.readFileSync('mainPage.html', function(err, info){
+   if (err) {
+     console.error(err);
+     res.statusCode = 500;
+     res.end("На сервере произошла ошибка!");
+    return;
 }
+  console.log('Succes');
+});
+    res.write(info);
+    res.end();
+    console.log("Success MainPage");
+  }
+
 
 }).listen(8888);
