@@ -11,10 +11,10 @@ function send404(responce){
 }
 function sendFile(responce, filePath, fileContents){
   responce.writeHead(200, {"content-type":mime.lookup(path.basename(filePath))});
-  responce.end(fileCpntents);
+  responce.end(fileContents);
 }
 
-function serveStatic(responce, cache, absPath){
+function serverStatic(response, cache, absPath){
   if (cache[absPath]){
     sendFile(response, absPath, cache[absPath]);
   } else {
@@ -26,6 +26,7 @@ function serveStatic(responce, cache, absPath){
           } else {
             cache[absPath] = data;
             sendFile(response, absPath, data);
+
           }
         });
       } else {
